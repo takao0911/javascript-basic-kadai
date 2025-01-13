@@ -1,6 +1,19 @@
 
+const btn = document.getElementById('btn');
+
+// textというidを持つHTML要素を取得し、定数に代入する
+const text = document.getElementById('text');
+
+// HTML要素がクリックされたときにイベント処理を実行する
 btn.addEventListener('click', () => {
-  console.log('ボタンをクリックしました');
-  // メッセージ表示用の要素にメッセージを設定
-  text.textContent = 'ボタンをクリックしました';
+
+    const childList = document.createElement('li');
+
+    childList.textContent = 'ボタンをクリックしました';
+
+    text.appendChild(childList);
+
+    text.textContent    = "ボタンをクリックしました。";
+
+    
 });
